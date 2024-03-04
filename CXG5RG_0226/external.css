@@ -1,0 +1,19 @@
+.external-style {
+    color: green;
+    font-size: 22px;
+}
+
+div {
+    color: purple;
+    font-size: 24px;
+}
+
+#id-style {
+    color: orange;
+    font-size: 26px;
+}
+
+.class-style {
+    color: brown;
+    font-size: 28px;
+}
