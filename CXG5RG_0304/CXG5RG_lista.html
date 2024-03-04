@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+    <style>
+        #link-div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rendezetlen">
+        <h2>a.) Rendezetlen lista</h2>
+        <ul>
+            <li>piros</li>
+            <li>kék</li>
+            <li>sárga</li>
+            <li>barna</li>
+        </ul>
+        <ul style="list-style: square; color: blue;">
+            <li>sárga</li>
+            <li>fehér</li>
+            <li>zöld</li>
+            <li>kék</li>
+        </ul>
+    </div>
+    <div class="rendezett">
+        <h2>b.) Rendezett lista</h2>
+        <ol>
+            <li>pink</li>
+            <li>kék</li>
+            <li>sárga</li>
+            <li>barna</li>
+        </ol>
+    </div>
+    <div class="nagybetu-rendezett">
+        <h2>c.) Nagybetűk - tartalma: itt a kedvenc színek</h2>
+        <ol style="list-style: upper-alpha;">
+            <li>pink</li>
+            <li>kék</li>
+            <li>sárga</li>
+            <li>barna</li>
+        </ol>
+    </div>
+    <div class="romai-rendezett">
+        <h2>d.) Római számok</h2>
+        <ol style="list-style:upper-roman;">
+            <li>ÉVF</li>
+            <li>ÉVF</li>
+            <li>ÉVF</li>
+        </ol>
+    </div>
+    <div class="nagybetu-rendezett-inline">
+        <h2>e.) Inline stílus legyen</h2>
+        <ol style="list-style:upper-alpha;color: red; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <li>sárga</li>
+            <li>pink</li>
+            <li>bíbor</li>
+            <li>türkiz</li>
+        </ol>
+    </div>
+    <div class="description">
+        <h2>f.) HTML Description Lists, itt a kedvenc állatok legyenek és hozzá a tulajdonságok
+            (legalább három)</h2>
+
+        <dl style="color: rgb(47, 152, 152);">
+            <dt><b>Farkas</b></dt>
+            <dd style="margin-bottom: 10px;">Kutyaszerű ragadozó emlős</dd>
+
+            <dt><b>Fájl</b></dt>
+            <dd style="margin-bottom: 10px;">Szöveges állomány</dd>
+
+            <dt><b>Oroszlán</b></dt>
+            <dd style="margin-bottom: 10px;">Macskaszerű ragadozó emlős <br> Az állatok királya </dd>
+
+        </dl>
+    </div>
+    <div class="beagyazott-lista">
+        <h2>g.) Beágyazott HTML listák: Kedvenc reggeli italaim</h2>
+        <h2 style="color: purple;">Kedvenc reggeli italaim</h2>
+        <ul>
+            <li>Kávé</li>
+            <li>Tea</li>
+            <ul>
+                <li>Fekete tea</li>
+                <li>Zöld tea</li>
+            </ul>
+            <li>Tej</li>
+        </ul>
+    </div>
+    <div class="Control-List">
+        <h2>h.) Control List Counting - itt a csoporttársak legyenek - névsorban DESC a végétől</h2>
+        <ol start="5" style="list-style: decimal;">
+            <li>KL</li>
+            <li>EL</li>
+            <li>BL</li>
+        </ol>
+    </div>
+</body>
+
+</html>
