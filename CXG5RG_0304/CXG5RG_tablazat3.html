@@ -16,26 +16,31 @@
     <div class="table">
         <h1>Táblázat készítése</h1>
         <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Második formázott táblázatom</h2>
-        <table>
-          <tr style="background-color: gray; font-style: italic;">
+        <table border="1" cellspacing="0" cellpadding="0" style="table-layout: fixed; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; color:black;font-weight: bold; background: #ffffcc;">
+          <caption><h1>Táblázat elemei</h1></caption>
+          <tr style="background-color: gray; font-style: italic;font-size: 12pt;">
             <th>1. oszlop fejléc</th>
             <th>2. oszlop fejléc</th>
             <th>3. oszlop fejléc</th>
           </tr>
-            <tr style="background-color: red;">
-              <td>1. sor 1. elem</td>
-              <td>1. sor 2. elem</td>
-              <td>1. sor 3. elem</td>
+            <tr style="height:100px; background: #ff6666;">
+              <td style="width: 100px; text-align: center;">1. sor 1. elem</td>
+              <td style="width: 100px; text-align: right; vertical-align: top;">1. sor 2. elem</td>
+              <td style="width: 100px; text-align: center; vertical-align: bottom;">1. sor 3. elem</td>
             </tr>
-            <tr style="background-color: bisque;">
-              <td>2. sor 4. elem</td>
-              <td style="overflow: scroll;">adsdsaadsdasdsdasdaadsadadasdd</td>
-              <td>2. sor 6. elem</td>
+            <tr style="height: 50px;">
+              <td style="width: 100px;">2. sor 4. elem</td>
+              <td >
+                <div style="overflow: scroll; width: 100px;height: 100px;">
+                  2. sor 5. elem
+                </div>
+              </td>
+              <td style="width: 100px; vertical-align: top; text-align: right;">2. sor 6. elem</td>
             </tr>
             <tr style="height: 100px;">
-              <td style="background-color: bisque;">3. sor 7. elem</td>
-              <td style="background-color: palevioletred;">3. sor 8. elem</td>
-              <td style="background-color: bisque;">3. sor 9. eleme</td>
+              <td>3. sor 7. elem</td>
+              <td style="background-color: #ffff66;">3. sor 8. elem</td>
+              <td>3. sor 9. eleme</td>
             </tr>
           </table>
     </div>
