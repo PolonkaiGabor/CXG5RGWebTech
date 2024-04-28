@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 rajzolás a vászonra</title>
+</head>
+
+<body>
+    <header id="fejlec" class="fejlec">
+        Rajzolás a vászonra - CXG5RG
+    </header>
+
+    <section id="tartalom">
+
+        <canvas id="PG_canvas" width="700" height="350" style="border: 1px solid #000000;">
+        </canvas>
+
+        <img id="kep" src="iit.jpg" style="display: none;" alt="">
+
+    </section>
+
+    <footer id="lablec" class="lablec">
+        <b>Források:</b>
+        <br><br>
+        <a href="">forras1</a>
+        <br><br>
+        <a href="">forras2</a>
+        <br><br>
+        <a href="">forras3</a>
+        <br><br>
+        <a href="">forras4</a>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            var pg = document.getElementById("PG_canvas");
+            var pgx = pg.getContext("2d");
+
+            pgx.lineWidth = 5;
+            pgx.strokeStyle = "#0066ff";
+            pgx.strokeRect(80, 180, 200, 120);
+
+            //////////////////////////
+            const grd = pgx.createRadialGradient(175, 87, 10, 200, 100, 75);
+            grd.addColorStop(0, "#ffcc00");
+            grd.addColorStop(0.3, "#6600ff");
+            grd.addColorStop(1, "#33ff33");
+
+            pgx.fillStyle = grd;
+            pgx.fillRect(100, 60, 150, 75);
+
+            ////////////////////////////
+            const img = document.getElementById("kep");
+            pgx.drawImage(img, 500, 200,500,700,560,200,135,180);
+
+            ////////////////////////////
+            pgx.fillStyle = grd;
+            pgx.fillRect(100, 60, 150, 75);
+
+
+            pgx.lineWidth = 7;
+            pgx.strokeStyle = "#6633ff";
+            pgx.beginPath();
+            pgx.arc(450,150,65,0.3*Math.PI, 1.5*Math.PI);
+            pgx.stroke();
+
+            pgx.fillStyle = "#ffcc33";
+            pgx.fill();
+
+            //font
+            pgx.lineWidth = 2;
+            pgx.strokeStyle = "#cc0066";
+            pgx.font = "40px Calibri";
+
+            //font - align
+            pgx.textAlign = "center";
+            pgx.fillStyle = "#ff6600";
+            pgx.fillText("Mérnökinformatikus 2024",350,40);
+
+        }
+    </script>
+</body>
+
+</html>

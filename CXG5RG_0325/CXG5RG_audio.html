@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Audió - zene, hang - lejátszása_CXG5RG</h1>
+    </header>
+    
+    <audio id="myAudio" controls>
+        <source src="jazzy.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+
+        <button onclick="playPause()">lejátszás / szünet</button>
+        <button onclick="playEffect('yes.mp3')">pozitív</button>
+        <button onclick="playEffect('no.mp3')">negatív</button>
+    <br><br>
+
+        <button onclick="changeVolume('silent')">Néma</button>
+        <button onclick="changeVolume('quiet')">Halk</button>
+        <button onclick="changeVolume('loud')">Hangos</button>
+
+        <button onclick="changeSpeed('very_slow')">nagyon lassú</button>
+        <button onclick="changeSpeed('slow')">lassú</button>
+        <button onclick="changeSpeed('normal')">normál</button>
+        <button onclick="changeSpeed('fast')">gyorsabb</button>
+        <button onclick="changeSpeed('very_fast')">nagyon gyors</button>
+
+    <br><br>
+
+        <button onclick="checkIfEnded()">befejeződott-e</button>
+        <button onclick="showMusicLength()">audió hossza (mp)</button>
+        <button onclick="showCurrentTime()">jelenlegi pozició</button>
+    
+        <button onclick="jumpTo(90)">ugrás másfél perchez</button>
+
+    <footer>
+        <p id="status"></p>
+    </footer>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        var isMuted = false;
+
+        function playPause() {
+            if (audio.paused)
+                audio.play();
+            else
+                audio.pause();
+        }
+
+        function changeVolume(volume) {
+            switch (volume) {
+                case 'silent':
+                audio.volume = 0;
+                    break;
+                case 'quiet':
+                audio.volume = 0.25;
+                    break;
+                case 'loud':
+                audio.volume = 1;
+                    break;
+            }
+        }
+
+        function changeSpeed(speed) {
+            switch (speed) {
+                case 'very_slow':
+                audio.playbackRate = 0.25;
+                    break
+                case 'slow':
+                audio.playbackRate = 0.5;
+                    break;
+                case 'normal':
+                audio.playbackRate = 1;
+                    break;
+                case 'fast':
+                audio.playbackRate = 2;
+                    break;
+                case 'very_fast':
+                audio.playbackRate = 3;
+                    break;
+            }
+        }
+
+        function playEffect(effect) {
+            var effectAudio = new Audio(effect);
+            effectAudio.play();
+        }
+
+        function jumpTo(seconds) {
+            audio.currentTime = seconds;
+        }
+
+        function checkIfEnded() {
+            if (audio.ended)
+                alert("Vége a zenének");
+            else
+                alert("Megy a zene");
+        }
+
+        function showMusicLength() {
+            alert("Zene hossza: " + audio.duration + " másodperc");
+        }
+
+        function showCurrentTime() {
+            alert("Jelenlegi pozició: " + audio.currentTime + " másodperc");
+        }
+
+
+       function showStatus() {
+            if (audio.ended) {
+                alert("VÉGE");
+            }
+        }
+        audio.addEventListener('timeupdate', showStatus);
+    </script>
+</body>
+</html>
