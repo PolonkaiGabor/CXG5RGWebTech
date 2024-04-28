@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+    <style>
+         .lablec {
+        width: 560px;
+        font-size: 10pt;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 40px;
+        border-top: 3px #888888 double;
+        padding: top 30px;
+        text-align: right;
+      }
+    </style>
+</head>
+
+<body>
+    <video src="video.mp4" id="video" width="420px" controls></video>
+    <br><br>
+    <button onclick="playVideo()">Indítás</button>
+    <button onclick="pauseVideo()">Leállítás</button>
+
+    <button onclick="playPause()">Indítás / Leállítás</button>
+    <br><br>
+    <button onclick="changeVolume('silent')">néma</button>
+    <button onclick="changeVolume('quiet')">halk</button>
+    <button onclick="changeVolume('loud')">hangos</button>
+
+    <button onclick="changeSpeed('very_slow')">Nagyon lassú</button>
+    <button onclick="changeSpeed('slow')">lassú</button>
+    <button onclick="changeSpeed('normal')">normál</button>
+    <button onclick="changeSpeed('fast')">gyorsabb</button>
+    <button onclick="changeSpeed('very_fast')">nagyon gyors</button>
+    <br><br>
+    <button onclick="zoomOut()">kicsi</button>
+    <button onclick="resetSize()">normál</button>
+    <button onclick="zoomIn()">nagy</button>
+
+    <button onclick="checkIfEnded()">befejeződott-e</button>
+    <button onclick="showVideoLength()">videó hossza (mp)</button>
+    <button onclick="showCurrentTime()">jelenlegi pozició</button>
+
+    <footer id="lablec" class="lablec">
+        <br><br>
+        Forras:
+        <a href="https://www.w3schools.com/html/html5_video.asp" target="_blank">https://www.w3schools.com/html/html5_video.asp</a>
+    </footer>
+
+    <script>
+        var myVideo = document.getElementById("video");
+
+        function playVideo() {
+            myVideo.play();
+        }
+
+        function pauseVideo() {
+            myVideo.pause();
+        }
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function changeVolume(volume){
+            switch (volume) {
+                case 'silent':
+                    myVideo.volume = 0;
+                    break;
+                case 'quiet':
+                    myVideo.volume = 0.25;
+                    break;
+                case 'loud':
+                    myVideo.volume = 1;
+                    break;
+            }
+        }
+
+        function changeSpeed(speed) {
+            switch (speed) {
+                case 'very_slow':
+                    myVideo.playbackRate = 0.25;
+                    break
+                case 'slow':
+                    myVideo.playbackRate = 0.5;
+                    break;
+                case 'normal':
+                    myVideo.playbackRate = 1;
+                    break;
+                case 'fast':
+                    myVideo.playbackRate = 2;
+                    break;
+                case 'very_fast':
+                    myVideo.playbackRate = 3;
+                    break;
+            }
+        }
+
+        function checkIfEnded() {
+            if (myVideo.ended)
+                alert("Vége a videónak");
+            else
+                alert("Megy a videó");
+        }
+
+        var originalWidth = myVideo.offsetWidth;
+
+        function showVideoLength() {
+            alert("Video hossza: " + myVideo.duration + " másodperc");
+        }
+
+        function showCurrentTime() {
+            alert("Jelenlegi pozició: " + myVideo.currentTime + " másodperc");
+        }
+
+        function zoomIn() {
+            myVideo.style.width = (myVideo.offsetWidth * 1.1) + "px";
+        }
+
+        function zoomOut() {
+            myVideo.style.width = (myVideo.offsetWidth * 0.9) + "px";
+        }
+
+        function resetSize() {
+            myVideo.style.width = originalWidth + "px";
+        }
+
+    </script>
+</body>
+
+</html>
