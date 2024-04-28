@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="HU">
+    <head>
+        <title> JS objektumot konvertálja JSON Text</title>
+    </head>
+    <body>
+        <h1>JS objektumot konvertálja JSON Text</h1>
+        <p id="szoveg"></p>
+    </body>
+    <script>
+        var adatok = {nev:"Polonkai Gábor", iranyitoszam:3515, varos:"Miskolc", egyetem:"Miskolci egyetem"};
+        var JavaScriptObj = JSON.stringify(adatok);
+        document.getElementById("szoveg").innerHTML = JavaScriptObj;
+    </script>
+</html>

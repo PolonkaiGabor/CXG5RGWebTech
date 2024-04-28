@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="HU">
+    <head>
+        <title>JSON Text konvertálása JavaScript objektummá!</title>
+    </head>
+    <body>
+        <h1>JSON Text konvertálása JavaScript objektummá!</h1>
+        <p id="szoveg"></p>
+    </body>
+    <script>
+        const text = '{"nev":"Polonkai Gábor", "iranyitoszam":3515, "varos":"Miskolc", "egyetem":"Miskolci egyetem"}'
+        const obj = JSON.parse(text);
+       // document.getElementById("szoveg").innerHTML = "{"+obj.nev + ":";
+        document.getElementById("szoveg").innerHTML = obj.nev + ", " + obj.iranyitoszam + ", " + obj.varos + ", " + obj.egyetem;
+    </script>
+</html>
