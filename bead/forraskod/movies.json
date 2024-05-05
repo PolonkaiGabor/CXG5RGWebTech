@@ -1,0 +1,126 @@
+{
+    "recommended": [
+        {
+            "image": "watch/movie/boritokep/tenet.jpg",
+            "name": "Tenet",
+            "date": "2020",
+            "duration": "150 perc",
+            "type": "Film",
+            "url": "watch/movie/tenet.html"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        },
+        {
+            "image": "files/logo.jpg",
+            "name": "Teszt film",
+            "date": "2024",
+            "duration": "121",
+            "type": "Film",
+            "url": "asd"
+        }
+    ],
+    "latest":[
+        {
+            "image": "files/logo.jpg",
+            "name": "Újabb film",
+            "date": "2030",
+            "duration": "100 perc",
+            "type": "Film",
+            "url": "asd"
+        }
+    ],
+    "recommended_sorozat":[
+        {
+            "image": "files/logo.jpg",
+            "name": "Ajánlott Sorozat",
+            "date": "2030",
+            "duration": "100 perc",
+            "type": "Film",
+            "url": "asd"
+        }
+    ],
+    "osszes_sorozat":[
+        {
+            "image": "files/logo.jpg",
+            "name": "Összes sorozat",
+            "date": "2030",
+            "duration": "100 perc",
+            "type": "Film",
+            "url": "asd"
+        }
+    ],
+    "osszes_film":[
+        {
+            "image": "files/logo.jpg",
+            "name": "Összes film",
+            "date": "2030",
+            "duration": "100 perc",
+            "type": "Film",
+            "url": "asd"
+        }
+    ],
+    "ujabb_sorozat":[
+        {
+            "image": "files/logo.jpg",
+            "name": "Újabb sorozat",
+            "date": "2030",
+            "duration": "100 perc",
+            "type": "Film",
+            "url": "asd"
+        }
+    ]
+}
