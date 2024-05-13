@@ -31,6 +31,12 @@ function register() {
     
 }
 
+function playSound(soundFile) {
+    var audio = new Audio();
+    audio.src = soundFile;
+    audio.play();
+}
+
 function validateRegister() {
     var firstName = document.getElementById("firstname");
     var lastName = document.getElementById("lastname");
@@ -83,17 +89,9 @@ function validateRegister() {
         color.style.border = ""; // Alaphelyzet visszaállítása
     }
 
-    // Radio Button ellenőrzése
-    if (!radio.checked) {
-        radio.parentNode.style.color = "red"; // A rádiógomb szövegszíne
-        isValid = false;
-    } else {
-        radio.parentNode.style.color = ""; // Alaphelyzet visszaállítása
-    }
 
     // Date Picker ellenőrzése
     if (datePicker.value === "") {
-        alert("szar");
         datePicker.style.border = "2px solid red";
         isValid = false;
     } else {
@@ -103,9 +101,13 @@ function validateRegister() {
 
     // Ha van bármelyik hiba, akkor ne küldje el az űrlapot
     if (!isValid) {
+        playSound("files/error.mp3");
         return false;
     }
+    playSound("files/succes.mp3");
 }
+
+
 
 function validateLogin() {
     var email = document.getElementById("login-email");
@@ -130,6 +132,8 @@ function validateLogin() {
 
     // Ha van bármelyik hiba, akkor ne küldje el az űrlapot
     if (!isValid) {
+        playSound("files/error.mp3");
         return false;
     }
+    playSound("files/succes.mp3");
 }
