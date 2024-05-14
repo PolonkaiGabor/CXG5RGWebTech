@@ -1,0 +1,44 @@
+{
+    "PG_orarend" : {
+        "kurzusok" : [
+            {
+                "kurzusnev" : "Adatkezelés XML-es környezetben",
+                "idopont" : {
+                    "nap" : "Kedd",
+                    "tol" : "14:00",
+                    "ig" : "16:00"
+                },
+                "helyszin" : "In103",
+                "oktato" : "Dr. Bednarik László",
+                "szak" : "PTI, MI"
+            },
+            {
+                "kurzusnev" : "Fizika",
+                "idopont" : {
+                    "nap" : "Hétfő",
+                    "tol" : "12:00",
+                    "ig" : "14:00"
+                },
+                "helyszin" : "E30",
+                "oktato" : "Dr. Pszota Gábor",
+                "szak" : "FIZ"
+            }
+        ],
+        "cim" : {
+            "street": "Egyetemváros",
+            "city" : "Miskolc",
+            "code": 1021
+        },
+        "phone number" : [
+            {
+                "type" : "Vezetékes",
+                "number" : "0646 555-123"
+            },
+            {
+                "type": "Mobil",
+                "number": "0670 555-4567"
+            }
+        ]
+
+    }
+}
